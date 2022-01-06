@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/images.css">
+    
+</head>
+<body>
+    {{>nav}}
+    {{>pages}}
+    <div class="main">
+        <div class="heading">
+            <p>download images:</p>
+        </div>
+        <div class="instruct">
+            <p>steps to download:</p>
+            <ol>
+                <li>paste link of the image and it will download the image automatically.</li>
+                <li>now find the image in your downloads and open it as image.</li>
+                <li>now! your are done here.</li>
+                <li><b>have fun</b></li>
+            </ol>
+        </div>
+
+        <div class="form">
+            <form action="/images" method="post">
+                <input type="search" placeholder="paste link here...|" name="value">
+                <button type="submit">Find</button>
+            </form>
+        </div>
+
+        <div class="img_para">
+            <p>this tool will help you download all images including paid ones with best resolutions,with just one click without any annoying ads. so go and have fun.</p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/video.css">
+    
+</head>
+<body>
+    {{>nav}}
+    {{>pages}}
+
+    <div class="main">
+        
+        <div class="heading">
+            <p>download videos:</p>
+        </div>
+
+        <div class="instruct">
+            <p>this tool will help you download videos from all over the internet for free with hight resultions including youtube, facebook, instagram, tiktok and many other popular sites with only one click.<br><br><b>if you are having trouble with downloading that means that the url is incorrect.</b></p>
+        </div>
+
+        <div class="form">
+            <form action="/videos" method="post">
+                <input type="search" placeholder="type link here" name="value">
+                <button type="submit">Find</button>
+            </form>
+        </div>
+        
+        {{#if data.type}}
+        <div class="info">
+            <div class="image">
+                <img src="{{data.data.info.thub}}" alt="" srcset=""><br>
+            </div>
+            <div class="vid_title">
+                <p>{{data.data.info.title}}</p>
+            </div>
+        </div>
+            
+            <div class="table">
+            {{#each data.data.links}}
+                <div class="table_sec">
+                    <div class="down_form">
+                        <p>{{this.format}}</p>
+                    </div>
+                    <div class="down_quality">
+                        <p>{{this.quality}}</p>
+                    </div>
+                    <div class="down_btn">
+                        <a href="{{this.url}}" download="{{this.url}}">DOWNLOAD</a>
+                    </div>
+                </div>
+            {{/each}}
+
+            </div>
+
+            {{#else}}
+                <p>INVALID URL</p>
+            {{/else}}
+        {{/if}}
+    </div>
+</body>
+</html>

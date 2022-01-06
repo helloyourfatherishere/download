@@ -1,0 +1,84 @@
+.heading{
+    margin: 1% 5%;
+}
+.heading>p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #4169e1;
+    text-align: center;
+}
+.instruct{
+    margin: 1% 2%;
+}
+.instruct>p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.instruct>ol>li{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: capitalize;
+    list-style: decimal;
+    margin: .5% 5%;
+    font-size: 1.2rem;
+}
+.form{
+    background-color: #4169e1;
+    width: 95%;
+    margin: 2% 2.5%;
+}
+form{
+    border: 1px solid blue;
+    height: 45px;
+    display: flex;
+}
+form>input{
+    flex: .75;
+    margin: .2% .1%;
+    border: 1px solid white;
+    outline-width: 0;
+}
+form>button{
+    flex:.25;
+    margin: .2% .1%;
+    background-color: #4169e1;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.img_para{
+    margin: 1%;
+}
+.img_para>p{
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+@media only screen and (max-width: 450px) {
+    .heading>p{
+        font-size: 1.4rem;
+    }
+    .form{
+        width: 100%;
+        margin: 1% 0;
+    }
+    .instruct>p{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    .instruct>ol>li{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-transform: capitalize;
+        list-style: decimal;
+        margin: .5% 5%;
+        font-size: 1rem;
+    }
+  }
