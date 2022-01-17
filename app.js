@@ -71,6 +71,7 @@ app.get("/videos",(req,res)=>{
 })
 
 app.post("/videos",(req,res)=>{
+    console.log(req.body                )
     var value= `${req.body.value.toString()}`
     console.log(value)
         var v= async function(){
