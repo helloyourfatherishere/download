@@ -34,19 +34,21 @@
                 <button type="submit">Find</button>
             </form>
         </div>
+
+       
         
-        {{#if data.type}}
+        {{#if type}}
         <div class="info">
             <div class="image">
-                <img src="{{data.data.info.thub}}" alt="" srcset=""><br>
+                <img src="{{data.info.thub}}" alt="" srcset=""><br>
             </div>
             <div class="vid_title">
-                <p>{{data.data.info.title}}</p>
+                <p>{{data.info.title}}</p>
             </div>
         </div>
-            
+               {{data}}
             <div class="table">
-            {{#each data.data.links}}
+            {{#each data.links}}
                 <div class="table_sec">
                     <div class="down_form">
                         <p>{{this.format}}</p>

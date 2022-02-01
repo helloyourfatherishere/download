@@ -35,7 +35,7 @@
 
 var express= require("express");
 var app= express();
-var port= process.env.PORT || 1000
+var port=  process.env.PORT || 1000; 
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var bodyParser= require("body-parser"); 
@@ -71,27 +71,29 @@ app.get("/videos",(req,res)=>{
 })
 
 app.post("/videos",(req,res)=>{
-    console.log(req.body                )
     var value= `${req.body.value.toString()}`
     console.log(value)
         var v= async function(){
         try{
                 var link=value;
-                let data = await avd(link).then((result) => {
+                // let data = await avd(link)
+                // console.log(data)
+
+                let data =  avd(link).then((result) => {
                     console.log(result)
                     if(result==undefined){
-                        return({type:false,data:result})
+                        res.render("videos",{data:undefined,type:false})
                     }
                     else{
-                        return({type:true,data:result})
+                        res.render("videos",{data:result,type:true})
 
                     }
                 }).catch((e)=>{
                     console.log(e)
                     return({type:false,data:e.message})
                 })
-                console.log(data)
-                res.render("videos",{data:data})
+                // console.log(data)
+                // res.render("videos",{data:data})
         }
         catch{
             (e)=>{console.log(e)}
